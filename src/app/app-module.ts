@@ -11,6 +11,7 @@ import { MainMenu } from './header/main-menu/main-menu';
 import { ProductList } from './product-list/product-list';
 import { Counter } from './counter/counter';
 import { Welcome } from './welcome/welcome';
+import { ImageToggle } from './image-toggle/image-toggle';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { Welcome } from './welcome/welcome';
     ProductList,
     Counter,
     Welcome,
+    ImageToggle,
   ],
   imports: [
     BrowserModule,

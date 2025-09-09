@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './product-list.css'
 })
 export class ProductList {
+  name = 'John Doe';
+  addToCart: number = 0;
+
   product = {
     name: 'iPhone 13',
     price:  789,
@@ -23,5 +26,17 @@ export class ProductList {
   onNameChanged(event: any){
     // this.name = event.target.value;
     
+  }
+
+  decrementCart(){
+    if(this.addToCart > 0) {
+      this.addToCart--;
+    }
+  }
+
+  incrementCart(){
+    if(this.addToCart < this.product.inStock){
+      this.addToCart++;
+    }
   }
 }
