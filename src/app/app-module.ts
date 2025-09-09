@@ -10,6 +10,7 @@ import { TopMenu } from './header/top-menu/top-menu';
 import { MainMenu } from './header/main-menu/main-menu';
 import { ProductList } from './product-list/product-list';
 import { Counter } from './counter/counter';
+import { Welcome } from './welcome/welcome';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { Counter } from './counter/counter';
     MainMenu,
     ProductList,
     Counter,
+    Welcome,
   ],
   imports: [
     BrowserModule,
