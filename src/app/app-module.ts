@@ -8,6 +8,8 @@ import { Header } from './header/header';
 import { TopHeader } from './top-header/top-header';
 import { TopMenu } from './header/top-menu/top-menu';
 import { MainMenu } from './header/main-menu/main-menu';
+import { ProductList } from './product-list/product-list';
+import { Counter } from './counter/counter';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { MainMenu } from './header/main-menu/main-menu';
     TopHeader,
     TopMenu,
     MainMenu,
+    ProductList,
+    Counter,
   ],
   imports: [
     BrowserModule,
