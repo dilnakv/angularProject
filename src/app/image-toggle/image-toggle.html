@@ -1,16 +1,10 @@
 <div style="text-align:center; margin-top:50px;">
-  <h1>Image Toggle Example</h1>
-
-  <!-- Event binding -->
   <button (click)="toggleImage()">
-    {{ isImageVisible ? 'Hide Image' : 'Show Image' }}
+    Toggle Image
   </button>
 
   <br /><br />
-
-  <!-- Property binding on src + conditional rendering -->
-  <img *ngIf="isImageVisible"
-       [src]="imagePath"
-       alt="Toggled"
+ <img [src]="isImageVisible ? imagePath1 : imagePath2"
+       alt="Toggled Image"
        width="200">
 </div>

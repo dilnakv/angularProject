@@ -8,8 +8,9 @@ import { Component } from '@angular/core';
 })
 export class ImageToggle {
   isImageVisible = true;
-  imagePath = '/assets/image/leaf.jpeg';
+  imagePath1 = '/assets/image/leaf.jpeg';
 
+imagePath2 = '/assets/image/garden.jpeg';
   toggleImage() {
     this.isImageVisible = !this.isImageVisible;
   }
