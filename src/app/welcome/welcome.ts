@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './welcome.css'
 })
 export class Welcome {
-  isLoggedIn = false;   // change this to false to test
+  isLoggedIn = true;   // change this to false to test
   userName = 'Dilna';
 }
