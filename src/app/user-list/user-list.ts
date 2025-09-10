@@ -14,4 +14,19 @@ export class UserList {
     { id: 4, name: 'Anu', email: 'anu@gmail.com', status: 'blocked' },
     { id: 5, name: 'Kiran', email: 'kiran@gmail.com', status: 'active' }
   ];
+
+  getStyle(status: string) {
+    switch (status) {
+      case 'active':
+        return { color: 'green', 'font-weight': 'bold' };
+      case 'inactive':
+        return { color: 'orange' };
+      case 'pending':
+        return { color: 'blue', 'font-style': 'italic' };
+      case 'blocked':
+        return { color: 'red', 'text-decoration': 'underline' };
+      default:
+        return {};
+    }
+  }
 }

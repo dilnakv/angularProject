@@ -1,0 +1,22 @@
+.active-user {
+  color: green;
+  font-weight: bold;
+}
+
+.inactive-user {
+  color: orange;
+}
+
+.pending-user {
+  color: blue;
+  font-style: italic;
+}
+
+.blocked-user {
+  color: red;
+  text-decoration: underline;
+}
+
+.default-user {
+  color: gray;
+}

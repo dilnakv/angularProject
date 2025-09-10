@@ -1,40 +1,43 @@
 <!-- userlist.html -->
 <div style="margin:20px;">
-    <h3>Active Users</h3>
-    <ul>
-        <div *ngFor="let user of users">
-            <li *ngIf="user.status === 'active'">
-                {{ user.name }} - {{ user.email }}
-            </li>
-        </div>
-    </ul>
+  <h3>Active Users</h3>
+  <ul>
+    <div *ngFor="let user of users">
+      <li *ngIf="user.status === 'active'">
+        {{ user.name }} - {{ user.email }}
+      </li>
+    </div>
+  </ul>
 </div>
 
 <div style="margin:20px;">
   <h3>User Status Messages</h3>
   <div *ngFor="let user of users">
     <div [ngSwitch]="user.status">
-
-      <p *ngSwitchCase="'active'">
-        Welcome {{ user.name }}, Full access has been granted
+      <p *ngSwitchCase="'active'" 
+      [ngStyle]="getStyle(user.status)" 
+      [ngClass]="'active-user'">
+        Welcome {{ user.name }} – Full access granted
       </p>
 
-      <p *ngSwitchCase="'inactive'">
-        {{ user.name }}, Your account is not active, please reset your account
+      <p *ngSwitchCase="'inactive'" 
+      [ngStyle]="getStyle(user.status)" 
+      [ngClass]="'inactive-user'">
+        {{ user.name }}, Your account is not active. Please reset your account.
       </p>
 
-      <p *ngSwitchCase="'pending'">
-        {{ user.name }}, Your account will be activated after Admin’s approval
+      <p *ngSwitchCase="'pending'" 
+      [ngStyle]="getStyle(user.status)" 
+      [ngClass]="'pending-user'">
+        {{ user.name }}, Your account will be activated after Admin approval.
       </p>
 
-      <p *ngSwitchCase="'blocked'">
-        {{ user.name }}, Your account has been blocked and will be activated later
+      <p *ngSwitchCase="'blocked'" 
+      [ngStyle]="getStyle(user.status)" 
+      [ngClass]="'blocked-user'">
+        {{ user.name }}, Your account has been blocked and will be activated later.
       </p>
-
-      <p *ngSwitchDefault>
-        {{ user.name }}, Unknown status
-      </p>
-
     </div>
   </div>
+
 </div>
