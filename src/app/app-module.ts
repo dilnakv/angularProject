@@ -8,13 +8,15 @@ import { Header } from './header/header';
 import { TopHeader } from './top-header/top-header';
 import { TopMenu } from './header/top-menu/top-menu';
 import { MainMenu } from './header/main-menu/main-menu';
-import { ProductList } from './product-list/product-list';
+import { Container } from './container/container';
 import { Counter } from './counter/counter';
 import { Welcome } from './welcome/welcome';
 import { ImageToggle } from './image-toggle/image-toggle';
-import { Search } from './product-list/search/search';
+import { Search } from './container/search/search';
 import { FormsModule } from '@angular/forms';
 import { Registration } from './registration/registration';
+import { ProductList } from './container/product-list/product-list';
+import { UserList } from './user-list/user-list';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,14 @@ import { Registration } from './registration/registration';
     TopHeader,
     TopMenu,
     MainMenu,
-    ProductList,
+    Container,
     Counter,
     Welcome,
     ImageToggle,
     Search,
     Registration,
+    ProductList,
+    UserList,
   ],
   imports: [
     BrowserModule,

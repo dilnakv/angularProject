@@ -1,0 +1,40 @@
+<!-- userlist.html -->
+<div style="margin:20px;">
+    <h3>Active Users</h3>
+    <ul>
+        <div *ngFor="let user of users">
+            <li *ngIf="user.status === 'active'">
+                {{ user.name }} - {{ user.email }}
+            </li>
+        </div>
+    </ul>
+</div>
+
+<div style="margin:20px;">
+  <h3>User Status Messages</h3>
+  <div *ngFor="let user of users">
+    <div [ngSwitch]="user.status">
+
+      <p *ngSwitchCase="'active'">
+        Welcome {{ user.name }}, Full access has been granted
+      </p>
+
+      <p *ngSwitchCase="'inactive'">
+        {{ user.name }}, Your account is not active, please reset your account
+      </p>
+
+      <p *ngSwitchCase="'pending'">
+        {{ user.name }}, Your account will be activated after Admin’s approval
+      </p>
+
+      <p *ngSwitchCase="'blocked'">
+        {{ user.name }}, Your account has been blocked and will be activated later
+      </p>
+
+      <p *ngSwitchDefault>
+        {{ user.name }}, Unknown status
+      </p>
+
+    </div>
+  </div>
+</div>
