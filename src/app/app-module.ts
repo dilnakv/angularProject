@@ -17,6 +17,9 @@ import { FormsModule } from '@angular/forms';
 import { Registration } from './registration/registration';
 import { ProductList } from './container/product-list/product-list';
 import { UserList } from './user-list/user-list';
+import { Product } from './container/product-list/product/product';
+import { EmployeeList } from './employee-list/employee-list';
+import { Employee } from './employee-list/employee/employee';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,9 @@ import { UserList } from './user-list/user-list';
     Registration,
     ProductList,
     UserList,
+    Product,
+    EmployeeList,
+    Employee,
   ],
   imports: [
     BrowserModule,
