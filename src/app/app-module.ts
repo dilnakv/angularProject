@@ -14,6 +14,7 @@ import { Welcome } from './welcome/welcome';
 import { ImageToggle } from './image-toggle/image-toggle';
 import { Search } from './product-list/search/search';
 import { FormsModule } from '@angular/forms';
+import { Registration } from './registration/registration';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FormsModule } from '@angular/forms';
     Welcome,
     ImageToggle,
     Search,
+    Registration,
   ],
   imports: [
     BrowserModule,

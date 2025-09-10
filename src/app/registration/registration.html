@@ -1,0 +1,20 @@
+<div style="width: 300px; margin: 40px auto; text-align: left;">
+  <h2>User Registration</h2>
+  <div>
+    <div>
+      <label>Username:</label><br>
+      <input type="text" [(ngModel)]="regInput.username" name="username" />
+    </div>
+
+    <div style="margin-top: 10px;">
+      <label>Email:</label><br>
+      <input type="email" [(ngModel)]="regInput.email" name="email" />
+    </div>
+
+    <div style="margin-top: 10px;">
+      <label>Password:</label><br>
+      <input type="password" [(ngModel)]="regInput.password" name="password" />
+    </div>
+    <button (click)="onSubmit()" style="margin-top: 15px;">Register</button>
+  </div>
+</div>
