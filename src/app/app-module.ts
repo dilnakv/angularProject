@@ -12,6 +12,8 @@ import { ProductList } from './product-list/product-list';
 import { Counter } from './counter/counter';
 import { Welcome } from './welcome/welcome';
 import { ImageToggle } from './image-toggle/image-toggle';
+import { Search } from './product-list/search/search';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,10 +27,12 @@ import { ImageToggle } from './image-toggle/image-toggle';
     Counter,
     Welcome,
     ImageToggle,
+    Search,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

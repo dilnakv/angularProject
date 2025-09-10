@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './counter.css',
 })
 export class Counter {
-  count = 0;
+  count: number = 0;
   message = 'Click here to increase count'
   increment() {
     this.count++;

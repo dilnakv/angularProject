@@ -1,5 +1,10 @@
 <div style="text-align: center; margin-top: 50px;">
   <h1>Counter Example</h1>
-  <p>Current Count: {{ count }}</p> <!-- String Interpolation -->
+
+    <input type="number" [(ngModel)]="count" />
+
+  <!-- <p><strong>Current Count:</strong> {{ count }}</p> -->
+
   <button (click)="increment()" title={{message}}>Click Me</button> <!-- Event Binding -->
+  
 </div>
