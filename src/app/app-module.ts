@@ -20,6 +20,9 @@ import { UserList } from './user-list/user-list';
 import { Product } from './container/product-list/product/product';
 import { EmployeeList } from './employee-list/employee-list';
 import { Employee } from './employee-list/employee/employee';
+import { Filter } from './container/product-list/filter/filter';
+import { BookData } from './book-data/book-data';
+import { BookList } from './book-data/book-list/book-list';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,9 @@ import { Employee } from './employee-list/employee/employee';
     Product,
     EmployeeList,
     Employee,
+    Filter,
+    BookData,
+    BookList,
   ],
   imports: [
     BrowserModule,

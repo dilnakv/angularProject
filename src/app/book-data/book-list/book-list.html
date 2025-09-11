@@ -1,0 +1,7 @@
+<h3>Child: Select a Book</h3>
+<select (change)="onBookSelect($event)">
+  <option value="">-- Choose a book --</option>
+  <option *ngFor="let book of books" [value]="book.id">
+    {{ book.title }}
+  </option>
+</select>

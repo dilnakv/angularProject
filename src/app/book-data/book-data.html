@@ -1,0 +1,10 @@
+<h2>Parent Component</h2>
+
+<!-- Listen to bookSelected event from child -->
+<app-book-list (bookSelected)="onBookReceived($event)"></app-book-list>
+
+<div *ngIf="selectedBook" style="margin-top:20px;">
+  <h3>Selected Book Details:</h3>
+  <p><strong>Title:</strong> {{ selectedBook.title }}</p>
+  <p><strong>Author:</strong> {{ selectedBook.author }}</p>
+</div>
