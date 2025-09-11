@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Book } from '../app';
 
 @Component({
   selector: 'app-book-data',
@@ -10,7 +11,7 @@ export class BookData {
   selectedBook: any = null;
 
   // Method triggered when child emits book
-  onBookReceived(book: any) {
+  onBookReceived(book: Book) {
     this.selectedBook = book;
   }
 }
