@@ -1,10 +1,14 @@
 <div style="text-align: center; margin-top: 50px;">
   <h1>Counter Example</h1>
 
-    <input type="number" [(ngModel)]="count" />
+    <!-- <input type="number" [(ngModel)]="count" #counterValue /> -->
+<input #countInput type="number" [value]="count" readonly />
 
   <!-- <p><strong>Current Count:</strong> {{ count }}</p> -->
 
   <!-- <button (click)="increment()" title={{message}}>Click Me</button> Event Binding -->
+  <button (click)="increment(countInput)">Increase Counter</button>
+
+
   
 </div>
