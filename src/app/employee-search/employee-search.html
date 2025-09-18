@@ -3,14 +3,19 @@
   <button (click)="searchEmployee()">Search</button>
 </div>
 
-<div *ngIf="searchedEmployee" class="employee-details">
-  <h3>Employee Details</h3>
-  <p><strong>ID:</strong> {{ searchedEmployee.id }}</p>
-  <p><strong>Name:</strong> {{ searchedEmployee.name }}</p>
-  <p><strong>Department:</strong> {{ searchedEmployee.department }}</p>
-  <p><strong>Email:</strong> {{ searchedEmployee.email }}</p>
+<!-- Show results -->
+<div *ngIf="searchResults.length > 0" class="employee-list">
+  <h3>Search Results</h3>
+  <div *ngFor="let emp of searchResults" class="employee-card">
+    <p><strong>ID:</strong> {{ emp.id }}</p>
+    <p><strong>Name:</strong> {{ emp.name }}</p>
+    <p><strong>Department:</strong> {{ emp.department }}</p>
+    <p><strong>Email:</strong> {{ emp.email }}</p>
+    <hr />
+  </div>
 </div>
 
+<!-- Not found message -->
 <div *ngIf="notFound" class="not-found">
-  <p>No employee found with the given name.</p>
+  <p>No employees found with the given name.</p>
 </div>
