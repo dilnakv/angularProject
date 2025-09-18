@@ -1,9 +1,28 @@
 <h2>User Profile</h2>
 
-<div>
-  <app-skill *ngFor="let s of skills" [skillName]="s"></app-skill>
-</div>
+<!-- Skills list -->
+<ng-container *ngFor="let s of skills">
+  <app-skill [skillName]="s">
+    <!-- Add custom icon/description for each skill -->
+    <ng-container [ngSwitch]="s">
+      <i *ngSwitchCase="'React'" class="fab fa-react" style="color:#61DBFB"></i>
+      <i *ngSwitchCase="'Angular'" class="fab fa-angular" style="color:#DD0031"></i>
+      <i *ngSwitchCase="'Python'" class="fab fa-python" style="color:#FFD43B"></i>
+      <i *ngSwitchCase="'Java'" class="fab fa-java" style="color:#007396"></i>
+      <i *ngSwitchCase="'Node.js'" class="fab fa-node-js" style="color:#3C873A"></i>
+    </ng-container>
+    <span style="font-size: 12px; color: gray;">(Important skill)</span>
+  </app-skill>
+</ng-container>
 
+<!-- Button -->
 <button (click)="showSkills()">Show Skills</button>
 
-<p>{{ selectedSkillsMessage }}</p>
+<!-- Conditional message -->
+<ng-container *ngIf="selectedSkills.length > 0; else noSkills">
+  <p>User has skill on {{ selectedSkills.join(', ') }}</p>
+</ng-container>
+
+<ng-template #noSkills>
+  <p>User has not selected any skills</p>
+</ng-template>

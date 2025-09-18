@@ -1,4 +1,9 @@
-<label>
+<label style="display: flex; align-items: center; gap: 8px;">
   <input type="checkbox" [(ngModel)]="isSelected" />
-  {{ skillName }}
+  
+  <!-- Skill Name -->
+  <span>{{ skillName }}</span>
+  
+  <!-- Extra projected content: icon, description etc. -->
+  <ng-content></ng-content>
 </label>
