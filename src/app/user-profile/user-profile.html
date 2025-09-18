@@ -1,0 +1,9 @@
+<h2>User Profile</h2>
+
+<div>
+  <app-skill *ngFor="let s of skills" [skillName]="s"></app-skill>
+</div>
+
+<button (click)="showSkills()">Show Skills</button>
+
+<p>{{ selectedSkillsMessage }}</p>

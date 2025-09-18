@@ -23,6 +23,10 @@ import { Employee } from './employee-list/employee/employee';
 import { Filter } from './container/product-list/filter/filter';
 import { BookData } from './book-data/book-data';
 import { BookList } from './book-data/book-list/book-list';
+import { EmployeeSearch } from './employee-search/employee-search';
+import { EmployeeViewchildren } from './employee-viewchildren/employee-viewchildren';
+import { UserProfile } from './user-profile/user-profile';
+import { Skill } from './user-profile/skill/skill';
 
 @NgModule({
   declarations: [
@@ -46,6 +50,10 @@ import { BookList } from './book-data/book-list/book-list';
     Filter,
     BookData,
     BookList,
+    EmployeeSearch,
+    EmployeeViewchildren,
+    UserProfile,
+    Skill,
   ],
   imports: [
     BrowserModule,

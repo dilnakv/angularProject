@@ -1,4 +1,4 @@
-import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-employee-viewchildren',
@@ -7,7 +7,7 @@ import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
   styleUrl: './employee-viewchildren.css'
 })
 export class EmployeeViewchildren {
-employees = [
+  employees = [
     { id: 1, name: 'John Doe', department: 'HR', email: 'john.doe@example.com' },
     { id: 2, name: 'Jane Smith', department: 'IT', email: 'jane.smith@example.com' },
     { id: 3, name: 'Michael Johnson', department: 'Finance', email: 'michael.j@example.com' },

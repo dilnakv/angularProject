@@ -10,7 +10,7 @@ export class Search {
   searchText: string = '';
 
   updateSearchText(event: any){
-    this.searchText = event.target.value
+    // this.searchText = event.target.value
   }
 
 }
