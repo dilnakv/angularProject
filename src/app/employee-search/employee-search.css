@@ -1,0 +1,14 @@
+.search-box {
+  margin-bottom: 15px;
+}
+
+.search-box input {
+  padding: 5px;
+  margin-right: 8px;
+}
+
+.employee-details, .not-found {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 300px;
+}

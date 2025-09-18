@@ -1,0 +1,16 @@
+<div class="search-box">
+  <input #searchInput type="text" placeholder="Enter employee name" />
+  <button (click)="searchEmployee()">Search</button>
+</div>
+
+<div *ngIf="searchedEmployee" class="employee-details">
+  <h3>Employee Details</h3>
+  <p><strong>ID:</strong> {{ searchedEmployee.id }}</p>
+  <p><strong>Name:</strong> {{ searchedEmployee.name }}</p>
+  <p><strong>Department:</strong> {{ searchedEmployee.department }}</p>
+  <p><strong>Email:</strong> {{ searchedEmployee.email }}</p>
+</div>
+
+<div *ngIf="notFound" class="not-found">
+  <p>No employee found with the given name.</p>
+</div>
