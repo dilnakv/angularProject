@@ -1,0 +1,11 @@
+<div class="search-box">
+  <input #searchInput type="text" placeholder="Enter employee name" />
+  <button (click)="searchEmployee()">Search</button>
+</div>
+
+<div *ngFor="let emp of employees" #employeeCard class="employee-card">
+  <p><strong>ID:</strong> {{ emp.id }}</p>
+  <p><strong>Name:</strong> {{ emp.name }}</p>
+  <p><strong>Department:</strong> {{ emp.department }}</p>
+  <p><strong>Email:</strong> {{ emp.email }}</p>
+</div>
