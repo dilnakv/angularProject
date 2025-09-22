@@ -1,0 +1,10 @@
+<div class="profile">
+  <h2>{{ employee.name }}</h2>
+  <p>Role: {{ employee.role }}</p>
+  <p>Currently Assigned Project: {{ employee.project }}</p>
+
+  <button (click)="changeProject()">Change Project</button>
+
+  <!-- Passing employee details to child -->
+  <app-project [project]="employee.project"></app-project>
+</div>

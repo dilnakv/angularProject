@@ -27,6 +27,8 @@ import { EmployeeSearch } from './employee-search/employee-search';
 import { EmployeeViewchildren } from './employee-viewchildren/employee-viewchildren';
 import { UserProfile } from './user-profile/user-profile';
 import { Skill } from './user-profile/skill/skill';
+import { EmployeeProfile } from './employee-profile/employee-profile';
+import { Project } from './employee-profile/project/project';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,8 @@ import { Skill } from './user-profile/skill/skill';
     EmployeeViewchildren,
     UserProfile,
     Skill,
+    EmployeeProfile,
+    Project,
   ],
   imports: [
     BrowserModule,
