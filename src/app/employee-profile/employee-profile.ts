@@ -13,13 +13,35 @@ export class EmployeeProfile {
     project: 'Project A'
   };
 
-  // Assign new project when button is clicked
+  newProject: string = '';
+  message: string = '';
+
+  // changeProject() {
+  //   const projects = ['Project A', 'Project B', 'Project C', 'Project D'];
+  //   const random = projects[Math.floor(Math.random() * projects.length)];
+  //   this.employee = {
+  //     ...this.employee,
+  //     project: random
+  //   };
+  // }
+
   changeProject() {
-    const projects = ['Project A', 'Project B', 'Project C', 'Project D'];
-    const random = projects[Math.floor(Math.random() * projects.length)];
-    this.employee = {
-      ...this.employee,
-      project: random
-    };
+    if (!this.newProject.trim()) {
+      this.message = 'Please enter a project name';
+      return;
+    }
+
+    if (this.newProject === this.employee.project) {
+      this.message = `Project "${this.newProject}" is already assigned`;
+    } else {
+      this.employee = {
+        ...this.employee,
+        project: this.newProject
+      };
+      this.message = `New project "${this.newProject}" assigned successfully`;
+    }
+
+    // clear textbox
+    this.newProject = '';
   }
 }

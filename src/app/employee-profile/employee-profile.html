@@ -3,7 +3,10 @@
   <p>Role: {{ employee.role }}</p>
   <p>Currently Assigned Project: {{ employee.project }}</p>
 
+  <input type="text" [(ngModel)]="newProject" placeholder="Enter project name" />
   <button (click)="changeProject()">Change Project</button>
+
+  <p style="color: green">{{ message }}</p>
 
   <!-- Passing employee details to child -->
   <app-project [project]="employee.project"></app-project>
