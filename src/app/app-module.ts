@@ -29,6 +29,7 @@ import { UserProfile } from './user-profile/user-profile';
 import { Skill } from './user-profile/skill/skill';
 import { EmployeeProfile } from './employee-profile/employee-profile';
 import { Project } from './employee-profile/project/project';
+import { Chat } from './chat/chat';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { Project } from './employee-profile/project/project';
     Skill,
     EmployeeProfile,
     Project,
+    Chat,
   ],
   imports: [
     BrowserModule,
