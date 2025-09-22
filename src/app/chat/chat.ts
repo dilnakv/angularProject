@@ -1,4 +1,4 @@
-import { AfterViewChecked, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-chat',
@@ -6,7 +6,7 @@ import { AfterViewChecked, Component, ElementRef, ViewChild } from '@angular/cor
   templateUrl: './chat.html',
   styleUrl: './chat.css',
 })
-export class Chat implements AfterViewChecked {
+export class Chat implements AfterViewChecked, AfterViewInit {
   messages: string[] = ['Hello!', 'How are you?'];
   newMessage: string = '';
 
@@ -15,11 +15,19 @@ export class Chat implements AfterViewChecked {
   @ViewChild('chatContainer') private chatContainer!: ElementRef;
 
   ngAfterViewChecked(): void {
-    if (this.shouldScroll) {
+    // if (this.shouldScroll) {
+    //   this.scrollToBottom();
+    //   this.shouldScroll = false; // reset flag
+    // }
+  }
+
+  ngAfterViewInit(): void {
+     if (this.shouldScroll) {
       this.scrollToBottom();
       this.shouldScroll = false; // reset flag
     }
   }
+
 
   sendMessage() {
     if (this.newMessage.trim()) {
