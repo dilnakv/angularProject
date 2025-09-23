@@ -40,6 +40,7 @@ import { Highlight } from './customDirectives/highlight';
 import { Hover } from './customDirectives/hover';
 import { RoleBased } from './customDirectives/role-based';
 import { UserRole } from './user-role/user-role';
+import { BookSearch } from './book-search/book-search';
 
 @NgModule({
   declarations: [
@@ -80,6 +81,7 @@ import { UserRole } from './user-role/user-role';
     Hover,
     RoleBased,
     UserRole,
+    BookSearch,
   ],
   imports: [
     BrowserModule,
