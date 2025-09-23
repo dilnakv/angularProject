@@ -1,0 +1,17 @@
+<h2>Custom Structural Directive Example</h2>
+
+<!-- Admin Panel -->
+<div *appRoleBased="userRole === 'admin' ? 'admin' : ''">
+  <h3>Admin Panel</h3>
+  <p>Manage users and other settings</p>
+</div>
+
+<!-- Employee Dashboard -->
+<div *appRoleBased="userRole === 'employee' ? 'employee' : ''">
+  <h3>User Dashboard</h3>
+  <p>View your profile and other activities</p>
+</div>
+
+<!-- Role Switch -->
+<button (click)="userRole = 'admin'">Switch to Admin</button>
+<button (click)="userRole = 'employee'">Switch to Employee</button>

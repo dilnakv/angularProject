@@ -13,7 +13,7 @@ export class Highlight {
     this.renderer.addClass(this.element.nativeElement, 'highlight-product');
   }
 
-  @HostListener('mouseout') OnMouseOut(){
+  @HostListener('mouseleave') onMouseLeave() {
     this.renderer.removeClass(this.element.nativeElement, 'highlight-product');
   }
 

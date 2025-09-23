@@ -11,9 +11,9 @@
                 <h2>{{product.name}}</h2>
             </div>
             <div class="ekart-product-detail-gbc">
-                <span appSetBackground>{{product.gender}}</span>
-                <span appSetBackground>{{product.brand}}</span>
-                <span appSetBackground>{{product.category}}</span>
+                <span [appSetBackground] [textColor]="'white'">{{product.gender}}</span>
+                <span [appSetBackground]="'yellow'" [textColor]="'black'">{{product.brand}}</span>
+                <span [appSetBackground]="'black'" [textColor]="'white'">{{product.category}}</span>
             </div>
             <div class="ekart-product-detail-price">
                 <p>
@@ -56,7 +56,10 @@
             </div>
         </div>
         <div class="ekart-product-detail-addtoCart">
-            <button class="btn-add-to-cart">ADD TO CART</button>
+            <button class="btn-add-to-cart" *ngIf="product.is_in_inventory; else notifyMe" appHover>ADD TO CART</button>
+            <ng-template #notifyMe>
+                <button class="btn-add-to-cart">NOTIFY ME</button>
+            </ng-template>
         </div>
     </div>
     <div class="overlay"></div>
