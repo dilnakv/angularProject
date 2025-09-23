@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Products } from '../../models/Products';
 
 @Component({
   selector: 'app-product-list',
@@ -607,4 +608,7 @@ export class ProductList {
   onFilterChanged(value: string){
     this.selectedFilterRadioButton = value;    
   }
+
+  selectedProduct: Products;
+  @Input() searchText: string = '';
 }

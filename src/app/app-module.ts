@@ -30,6 +30,12 @@ import { Skill } from './user-profile/skill/skill';
 import { EmployeeProfile } from './employee-profile/employee-profile';
 import { Project } from './employee-profile/project/project';
 import { Chat } from './chat/chat';
+import { Highlight } from './highlight';
+import { Tooltip } from './tooltip';
+import { ProductDetails } from './container/product-details/product-details';
+import { SetBackground } from './customDirectives/set-background';
+import { ProductComponent } from './product-component/product-component';
+import { HoverEffect } from './customDirectives/hover-effect';
 
 @NgModule({
   declarations: [
@@ -60,6 +66,12 @@ import { Chat } from './chat/chat';
     EmployeeProfile,
     Project,
     Chat,
+    Highlight,
+    Tooltip,
+    ProductDetails,
+    SetBackground,
+    ProductComponent,
+    HoverEffect,
   ],
   imports: [
     BrowserModule,

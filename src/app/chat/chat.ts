@@ -16,16 +16,13 @@ export class Chat implements AfterViewChecked, AfterViewInit {
 
   ngAfterViewChecked(): void {
     // if (this.shouldScroll) {
-    //   this.scrollToBottom();
+      // this.scrollToBottom();
     //   this.shouldScroll = false; // reset flag
     // }
   }
 
   ngAfterViewInit(): void {
-     if (this.shouldScroll) {
-      this.scrollToBottom();
-      this.shouldScroll = false; // reset flag
-    }
+    this.scrollToBottom();
   }
 
 
