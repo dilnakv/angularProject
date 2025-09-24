@@ -1,17 +1,12 @@
 import { Injectable } from '@angular/core';
 import { interval, map, Observable, startWith } from 'rxjs';
-
-export interface ProductOb {
-  id: number;
-  name: string;
-  price: number;
-}
+import { ProductObs } from '../models/ProductObs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-   private products: ProductOb[] = [
+   private products: ProductObs[] = [
     { id: 1, name: 'Laptop', price: 1000 },
     { id: 2, name: 'Phone', price: 500 },
     { id: 3, name: 'Tablet', price: 300 },
@@ -21,14 +16,14 @@ export class ProductService {
     { id: 7, name: 'Printer', price: 700 }
   ];
 
-  getProducts(): Observable<ProductOb[]> {
+  getProducts(): Observable<ProductObs[]> {
     return interval(2000).pipe(
       startWith(0), // emit immediately
       map(() => {
         // random price fluctuation
         this.products = this.products.map(p => ({
           ...p,
-          price: Math.max(0, p.price + Math.floor(Math.random() * 21) - 10) // -10 to +10
+          price: Math.max(0, p.price + Math.floor(Math.random() * 11) - 5)
         }));
 
         // apply 10% discount for price > 500
