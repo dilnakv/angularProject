@@ -12,7 +12,9 @@
   <h2>Product Prices</h2>
   <ul>
     <li *ngFor="let product of products | async">
-      {{ product.name }} : <strong>{{ product.price | currency:'USD' }}</strong>
+      {{ product.name }} :
+      <strong>{{ product.price | currency:'USD' }}</strong>
+      <span *ngIf="product.price > 500" style="color:red;">(10% discount applied)</span>
     </li>
   </ul>
 </div>

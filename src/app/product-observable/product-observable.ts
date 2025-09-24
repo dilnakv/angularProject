@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { interval, Observable } from 'rxjs';
-import { map, scan } from 'rxjs/operators';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-product-observable',
@@ -8,7 +7,7 @@ import { map, scan } from 'rxjs/operators';
   templateUrl: './product-observable.html',
   styleUrl: './product-observable.css'
 })
-export class ProductObservable {
+export class ProductObservable implements OnInit{
    price!: Observable<number>; 
 
   ngOnInit(): void {
