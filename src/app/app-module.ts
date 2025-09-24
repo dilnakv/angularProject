@@ -41,6 +41,7 @@ import { Hover } from './customDirectives/hover';
 import { RoleBased } from './customDirectives/role-based';
 import { UserRole } from './user-role/user-role';
 import { BookSearch } from './book-search/book-search';
+import { ProductObservable } from './product-observable/product-observable';
 
 @NgModule({
   declarations: [
@@ -82,6 +83,7 @@ import { BookSearch } from './book-search/book-search';
     RoleBased,
     UserRole,
     BookSearch,
+    ProductObservable,
   ],
   imports: [
     BrowserModule,
